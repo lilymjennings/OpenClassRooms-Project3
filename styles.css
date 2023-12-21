@@ -1,0 +1,214 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+}
+h1 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight:bolder;
+}
+h3{
+  font-size: 16px;
+  font-weight: 500;
+}
+h2{
+  font-size: 18px;
+  font-weight: 100;
+}
+p{
+font-size: 14px;
+font-weight: 100;
+}
+.Loctaion-title {
+  font-family: Roboto;
+  font-weight: 100;
+  font-size: 16px;
+}
+.page-constraint {
+  max-width: 1440px;
+  min-width: 375px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.logo-element {
+  max-width: 197px;
+  padding: 14px;
+}
+.location-header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background-color: #EAEAEA;
+  box-shadow: 0px 3px 2px 0px lightgray inset;
+}
+
+.booking-button-bg {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  background-color: #F6F6F6;
+  width: 100%;
+  height: 280px;
+}
+#explore-restaurants-button {
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  width: 218px;
+  height: 50px;
+  border-style: none;
+  border-radius: 50px;
+  background-image: linear-gradient(#ff79da, #9356DC 100%);
+  box-shadow: 0px 3px 5px 0px lightgray;
+}
+/*****HOW IT WORKS******/
+.homepage-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1080px;
+  min-width: 335px;
+  gap: 15px;
+  height: 70px;
+  border-radius: 20px;
+  background: var(--Background, #F6F6F6);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.align-content-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-content: center;
+  max-width: 1080px;
+}
+.how-to-section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  padding: 20px;
+  padding-bottom: 40px;
+}
+.filter-numbers{  
+  display: flex;
+  font-size: 14x;
+  font-weight: 500;
+  color: white;
+  align-items: center;
+  background-color: #9356DC;
+  padding: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 15px;
+}
+/******likes*******/
+.inactive-like {
+  display: inline-flex;
+  align-items: flex-end;
+  width: 22px;
+}
+/*****RESTAURANTS******/
+.new-label-overlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 20px;
+  width: 80px;
+  background-color:#99E2D0;
+  color: #008766;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+}
+.restaurant-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  align-items: flex-end;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);  
+  background-color: white;
+}
+.image-card-restaurant {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 231px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.restaurant-card-text{
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  padding-left: 15px;
+  padding-bottom: 8px;
+  line-height: 1px;
+}
+.cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-content: center;
+  justify-content: space-between;
+  max-width: 1080px;
+}
+.restaurant-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #F6F6F6;
+}
+/*****footer********/
+.footer-background {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  justify-content: center;
+  padding: 20px;
+  align-items: flex-start;
+}
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  color: white;
+  text-decoration: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 0px;  
+  font-size: 16px;
+  gap: 10px;
+}
+.footer-logo {
+  width: 138px;
+}
+.gap-icon-footer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+}
