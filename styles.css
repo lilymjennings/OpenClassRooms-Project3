@@ -82,12 +82,33 @@ font-weight: 100;
   flex-wrap: wrap;
   align-items: center;
   max-width: 1080px;
-  min-width: 335px;
+  min-width: 300px;
   gap: 15px;
   height: 70px;
   border-radius: 20px;
+  padding-left: 20px;
   background: var(--Background, #F6F6F6);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.filter-all {
+  display: flex;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+}
+.filter-numbers{  
+  display: flex;
+  position: relative;
+  font-size: 14x;
+  font-weight: 500;
+  color: white;
+  align-items: center;
+  background-color: #9356DC;
+  padding: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 15px;
+  margin-right: -10px;
 }
 .align-content-container {
   display: flex;
@@ -105,36 +126,30 @@ font-weight: 100;
   padding: 20px;
   padding-bottom: 40px;
 }
-.filter-numbers{  
+.filter-alignment {
   display: flex;
-  font-size: 14x;
-  font-weight: 500;
-  color: white;
-  align-items: center;
-  background-color: #9356DC;
-  padding: 6px;
-  width: 10px;
-  height: 10px;
-  border-radius: 15px;
-}
-/******likes*******/
-.inactive-like {
-  display: inline-flex;
-  align-items: flex-end;
-  width: 22px;
+  align-self: center;
+  justify-content: center;
 }
 /*****RESTAURANTS******/
 .new-label-overlay {
   position: absolute;
   display: flex;
   justify-content: center;
+  align-self: flex-end;
   padding: 10px;
   margin: 20px;
   width: 80px;
   background-color:#99E2D0;
   color: #008766;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+  font-size: 14px;
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.15);
   border-radius: 2px;
+}
+.like-inactive {
+  display: flex; 
+  width: 22px;
 }
 .restaurant-card {
   display: flex;
@@ -143,9 +158,10 @@ font-weight: 100;
   width: 100%;
   max-width: 500px;
   border-radius: 15px;
-  align-items: flex-end;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);  
   background-color: white;
+  color: black;
+  text-decoration: none;
 }
 .image-card-restaurant {
   display: block;
@@ -155,13 +171,16 @@ font-weight: 100;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
 }
-.restaurant-card-text{
+.restaurant-card-all{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 5px 15px 8px 15px;
+}
+.card-text {
+  display: flex;   
   flex-direction: column;
-  align-self: start;
-  padding-left: 15px;
-  padding-bottom: 8px;
-  line-height: 1px;
+  line-height: 0%;
 }
 .cards-section {
   display: flex;
@@ -205,10 +224,46 @@ font-weight: 100;
 .footer-logo {
   width: 138px;
 }
-.gap-icon-footer {
+.gap-icon-footer{
   display: flex;
   gap: 10px;
   align-items: center;
   font-weight: 500;
   font-size: 16px;
+}
+
+.footer-links {
+  color: white;
+  text-decoration: none;
+}
+
+/***** Media Querys *******/
+@media screen and (max-width: 375px) {
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .footer-list {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 50px;
+    align-self: flex-end;
+  }
+  .footer-logo {
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: flex-end;
+    margin-bottom: 5px;
+  }
+  .footer-background {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;  
+    padding: 25px 30px 30px 25px;
+    height: 114px;
+  }
 }
