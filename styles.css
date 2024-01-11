@@ -52,6 +52,7 @@ p {
   margin-right: 0px;
 }
 .logo-element {
+  position: relative;
   max-width: 197px;
   padding: 14px;
 
@@ -95,7 +96,8 @@ p {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  max-width: 1080px;
+  width: 100%;
+  max-width: 1100px;
   min-width: 300px;
   gap: 15px;
   height: 70px;
@@ -127,16 +129,19 @@ p {
 .align-content-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   align-content: center;
+  gap: 30px;
+  justify-content: center;
   max-width: 1080px;
+  width: 100%;
+  margin-right: 0px;
 }
 .how-to-section {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 20px;
   padding-bottom: 40px;
 }
@@ -202,9 +207,9 @@ p {
 .cards-section {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   max-width: 1080px;
 }
 .restaurant-container {
@@ -256,17 +261,17 @@ p {
 }
 
 /***** restaurant pages *****/
-.sub-pages-nav {
+.header-restaurants {
   display: flex;
+  height: 63px;
   justify-content: center;
-  min-width: 375px;
-  max-width: 1440px;
-  background-color: white;
+  align-items: center;
+  padding: 0 20px 0 20px;
 }
-.arrow-nav {
-  display: flex;
-  align-self: center;
-  justify-self: flex-start;
+.arrow {
+  position: absolute;
+  left: 0%;
+  margin-left: 20px;
 }
 .full-width-header {
   display: flex;
@@ -303,10 +308,11 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 1440px;
+  max-width: 100%;
   min-width: 375px;
 }
-.subtitles-restaurants {
+.subtitles-uppercase {
+  text-transform: uppercase;
   border-bottom-style: solid;
   border-bottom-width: 3px;
   padding-bottom: 8px;
