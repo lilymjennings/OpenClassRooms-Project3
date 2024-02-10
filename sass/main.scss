@@ -1,5 +1,9 @@
 $mainlineargradient: linear-gradient(#ff79da, #9356DC 100%);
 $hoverlineargradient: linear-gradient(#FF8DE0 -5.2%, #A36FE1 110.74%);
+$mainfontfamily: "Roboto", sans-serif;
+$secondaryfont: Shrikhand;
+$no-margin: margin 0px;
+
 
 @mixin flexColumn {
     display: flex;
@@ -14,48 +18,49 @@ body {
     margin: 0px;
 }
 h1 {
-  font-family: "Roboto", sans-serif;
+  font-family: $mainfontfamily;
   font-size: 24px;
   font-style: normal;
   font-weight:bolder;
 }
 h3{
-  font-family: "Roboto", sans-serif;
+  font-family: $mainfontfamily;
   font-size: 16px;
   font-weight: 500;
 }
 h2{
-  font-family: "Roboto", sans-serif;  
+  font-family: $mainfontfamily;  
   font-size: 18px;
   font-weight: 100;
 }
 h4 {
-  font-family: "Roboto", sans-serif;
+  font-family: $mainfontfamily;
   margin: 0px;
 }
 h5 {
-  font-family: "Roboto", sans-serif;
+  font-family: $mainfontfamily;
   font-size: 14px;
   font-weight: 100;
-  margin: 0px;
+  margin: $no-margin;
 }
 .b {
-  font-family: Shrikhand;
+  font-family: $secondaryfont;
   font-size: 28px;
   font-weight: 400;
 }
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: $mainfontfamily;
   font-weight: 100;
   font-size: 14px;
+  margin: 0px;
 }
 /*** header first page ***/
 .header-container {
   @include flexColumn;
   align-items: center;
-  margin: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin: $no-margin;
+  margin-left: $no-margin;
+  margin-right: $no-margin;
   .logo-element {
     position: relative;
     max-width: 197px;
@@ -188,46 +193,69 @@ p {
   align-items: center;
   justify-content: center;
   max-width: 1080px;
-  .restaurant-card {
-    @include flexColumn;  
-    flex-wrap: wrap;
+}
+.restaurant-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);  
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  .image-card-restaurant {
+    display: block;
+    object-fit: cover;
     width: 100%;
-    max-width: 500px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);  
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    .image-card-restaurant {
-      display: block;
-      object-fit: cover;
-      width: 100%;
-      height: 220px;
-      border-top-right-radius: 15px;
-      border-top-left-radius: 15px;
-    }
+    height: 220px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
   }
 }
-.restaurant-card-all{
+
+.restaurant-card-all {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 10px 20px 10px 20px;
-  .card-text {
-    @include flexColumn; 
-    justify-content: center;
-    line-height: 22px;
+  margin: 20px 50px 0px 20px;
+}
+.card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 0px;
+}
+.heart--container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+  height: 25px;
+  .heart1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: 0.3s;
+    opacity: 100%;
+    &:hover {
+      opacity: 0%;
+    }
+  }
+  .heart2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.3s;
+    opacity: 0%;
+    &:hover {
+      opacity:100%;
+    }
   }
 }
-
-.heart {
-  --c: red;
-  position: relative;
-  width: 10px;
-  background: $mainlineargradient;
-  clip-path: polygon(-43% 0,50% 91%, 143% 0);
-}
-
 /*****footer********/
 .footer-background {
   @include flexColumn;  
@@ -284,11 +312,12 @@ p {
 .todays-menu {
   display: flex;
   justify-content: center;  
-  align-self: center;
+  align-items: center;
   max-width: 1055px;
   min-width: 375px;
-  gap: 87px;
-  margin-bottom: -20px;
+  height: 70px;
+  gap: 50px;
+  padding-top: 20px;
 }
 
 .restaurant-container-for-menus {
@@ -318,7 +347,7 @@ p {
   border-color: #99E2D0;
 }
 .meals-list {
-  @include flexColumn;  
+  @include flexColumn;
   justify-items: center;
   align-self: center;
   padding: 20px;
@@ -329,27 +358,48 @@ p {
   min-width: 330px;
 }
 .meals {
-  display: flex;
-  justify-content: space-between;
+  display: flex;  
   align-items: center;
-  line-height: 10px;
-  height: 50px;
-  padding: 20px 20px 5px 20px;
+  line-height: 1.5;
+  height: 75px;
   border-radius: 20px;
   background-color: white;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);  
-}
-.meal-part1 {
-  @include flexColumn;  
-  justify-content: center;
-  .meal-part2 {
-    @include flexColumn;  
-    justify-content: center;
-    margin-bottom: -8px;
+  &:hover{
+    .check-container {
+        transition-timing-function: cubic-bezier(.43,.29,.3,.99);
+        display: flex;
+        justify-content: center;
+        background-color: #99E2D0;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+        height: 75px;
+        width: 30%;
+        max-width: 70px;
+    }
   }
 }
-
-
+.check {
+  display: flex;
+  align-self: center;
+  justify-self: end;
+  width: 18px;
+  height: 18px;
+  }
+.meal-part1 {
+  @include flexColumn;  
+  width: 640px;
+  justify-content: center;
+  padding: 0px 0px 0px 12px;
+}
+.meal-part2 {
+  display: flex;
+  align-self: flex-start;
+  align-self: end;
+  white-space: none;
+  margin-bottom: 14px;
+  padding-right: 10px;
+}
 /***** Media Querys *******/
 @media screen and (max-width: 375px) {
   ul {

@@ -30,7 +30,7 @@ h5 {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 100;
-  margin: 0px;
+  margin: margin 0px;
 }
 
 .b {
@@ -43,6 +43,7 @@ p {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 14px;
+  margin: 0px;
 }
 
 /*** header first page ***/
@@ -50,9 +51,9 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin: margin 0px;
+  margin-left: margin 0px;
+  margin-right: margin 0px;
 }
 .header-container .logo-element {
   position: relative;
@@ -196,7 +197,8 @@ p {
   justify-content: center;
   max-width: 1080px;
 }
-.cards-section .restaurant-card {
+
+.restaurant-card {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -208,7 +210,7 @@ p {
   color: black;
   text-decoration: none;
 }
-.cards-section .restaurant-card .image-card-restaurant {
+.restaurant-card .image-card-restaurant {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
@@ -222,24 +224,46 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 10px 20px 10px 20px;
+  margin: 20px 50px 0px 20px;
 }
-.restaurant-card-all .card-text {
+
+.card-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  line-height: 22px;
+  line-height: 0px;
 }
 
-.like-btn {
+.heart--container {
   display: flex;
-  align-self: center;
-  border: black;
-  fill: white;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+  height: 25px;
 }
-.like-btn:hover {
+.heart--container .heart1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: 0.3s;
+  opacity: 100%;
+}
+.heart--container .heart1:hover {
   opacity: 0%;
 }
+.heart--container .heart2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.3s;
+  opacity: 0%;
+}
+.heart--container .heart2:hover {
+  opacity: 100%;
+}
+
 /*****footer********/
 .footer-background {
   display: flex;
@@ -304,11 +328,12 @@ p {
 .todays-menu {
   display: flex;
   justify-content: center;
-  align-self: center;
+  align-items: center;
   max-width: 1055px;
   min-width: 375px;
-  gap: 87px;
-  margin-bottom: -20px;
+  height: 70px;
+  gap: 50px;
+  padding-top: 20px;
 }
 
 .restaurant-container-for-menus {
@@ -357,26 +382,48 @@ p {
 
 .meals {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  line-height: 10px;
-  height: 50px;
-  padding: 20px 20px 5px 20px;
+  line-height: 1.5;
+  height: 75px;
   border-radius: 20px;
   background-color: white;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.meals:hover .check-container {
+  transition-timing-function: cubic-bezier(0.43, 0.29, 0.3, 0.99);
+  display: flex;
+  justify-content: center;
+  background-color: #99E2D0;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 75px;
+  width: 30%;
+  max-width: 70px;
+}
+
+.check {
+  display: flex;
+  align-self: center;
+  justify-self: end;
+  width: 18px;
+  height: 18px;
 }
 
 .meal-part1 {
   display: flex;
   flex-direction: column;
+  width: 640px;
   justify-content: center;
+  padding: 0px 0px 0px 12px;
 }
-.meal-part1 .meal-part2 {
+
+.meal-part2 {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: -8px;
+  align-self: flex-start;
+  align-self: end;
+  white-space: none;
+  margin-bottom: 14px;
+  padding-right: 10px;
 }
 
 /***** Media Querys *******/
