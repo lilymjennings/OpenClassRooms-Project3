@@ -106,6 +106,10 @@ p {
   }
 }
 
+#eating-places-link {
+  scroll-behavior: smooth;
+}
+
 /*****HOW IT WORKS******/
 .homepage-filters {
   display: flex;
@@ -367,7 +371,6 @@ p {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);  
   &:hover{
     .check-container {
-        transition-timing-function: cubic-bezier(.43,.29,.3,.99);
         display: flex;
         justify-content: center;
         background-color: #99E2D0;
@@ -376,7 +379,7 @@ p {
         height: 75px;
         width: 30%;
         max-width: 70px;
-    }
+    } 
   }
 }
 .check {

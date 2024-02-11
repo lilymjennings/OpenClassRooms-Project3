@@ -390,7 +390,6 @@ p {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 .meals:hover .check-container {
-  transition-timing-function: cubic-bezier(0.43, 0.29, 0.3, 0.99);
   display: flex;
   justify-content: center;
   background-color: #99E2D0;
