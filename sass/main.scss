@@ -48,7 +48,9 @@ h6 {
   font-family: $mainfontfamily;
   font-size: 24px;
   font-style: normal;
-  font-weight:bolder;
+  font-weight: bolder;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .b {
   font-family: $secondaryfont;
@@ -61,6 +63,8 @@ p {
   font-size: 14px;
   margin: $no-margin;
 }
+
+
 /*** header first page ***/
 .header-container {
   @include flexColumn;
@@ -171,6 +175,46 @@ p {
   padding: 20px;
   padding-bottom: 40px;
 }
+
+/****spinner******/
+.spinner-container {
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  animation: spinner-visable 3s forwards 1;
+  @keyframes spinner-visable {
+    100% {
+      overflow: hidden;
+      visibility: hidden;
+    }
+  }
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 7px solid #F6F6F6;
+  border-top: 7px solid #9356DC;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 0.8s ease infinite;
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  }
 
 /*****RESTAURANTS******/
 .new-label-overlay {
@@ -370,6 +414,26 @@ p {
   max-width: 634px;
   min-width: 330px;
 }
+
+.starters {
+  animation: fade-In 1s ease-in;
+}
+.mains {
+  animation: fade-In 2s ease-in;
+}
+.desserts {
+  animation: fade-In 3s ease-in;
+}
+
+@keyframes fade-In {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
 .meals {
   display: flex;  
   align-items: center;
@@ -378,26 +442,8 @@ p {
   border-radius: 20px;
   background-color: white;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);  
-  &:hover{
-    .check-container {
-        display: flex;
-        justify-content: center;
-        background-color: #99E2D0;
-        border-bottom-right-radius: 20px;
-        border-top-right-radius: 20px;
-        height: 75px;
-        width: 30%;
-        max-width: 70px;
-    } 
-  }
 }
-.check {
-  display: flex;
-  align-self: center;
-  justify-self: end;
-  width: 18px;
-  height: 18px;
-  }
+
 .meal-part1 {
   @include flexColumn;  
   width: 640px;
@@ -419,7 +465,35 @@ p {
     align-self: flex-start;
   }
 }
+
 @media screen and (min-width: 1440px) {
+.meals {
+  display: flex;  
+  align-items: center;
+  line-height: 1.5;
+  height: 75px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);  
+  &:hover{
+    .check-container {
+      display: flex;
+      justify-content: center;
+      background-color: #99E2D0;
+      border-bottom-right-radius: 20px;
+      border-top-right-radius: 20px;
+      height: 75px;
+      width: 70px; 
+      .check {
+        display: flex;
+        align-self: center;
+        justify-self: end;
+        width: 17px;
+        height: 17px;
+        }
+    }
+  }
+}
   .footer-background {
     @include flexRowRev;  
     background-color: #353535;
