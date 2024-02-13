@@ -2,7 +2,7 @@ $mainlineargradient: linear-gradient(#ff79da, #9356DC 100%);
 $hoverlineargradient: linear-gradient(#FF8DE0 -5.2%, #A36FE1 110.74%);
 $mainfontfamily: "Roboto", sans-serif;
 $secondaryfont: Shrikhand;
-$no-margin: margin 0px;
+$no-margin: 0px;
 
 
 @mixin flexColumn {
@@ -15,7 +15,7 @@ $no-margin: margin 0px;
 }
 
 body {
-    margin: 0px;
+  margin: $no-margin;
 }
 h1 {
   font-family: $mainfontfamily;
@@ -27,6 +27,7 @@ h3{
   font-family: $mainfontfamily;
   font-size: 16px;
   font-weight: 500;
+  margin: $no-margin;
 }
 h2{
   font-family: $mainfontfamily;  
@@ -43,6 +44,12 @@ h5 {
   font-weight: 100;
   margin: $no-margin;
 }
+h6 {
+  font-family: $mainfontfamily;
+  font-size: 24px;
+  font-style: normal;
+  font-weight:bolder;
+}
 .b {
   font-family: $secondaryfont;
   font-size: 28px;
@@ -52,15 +59,13 @@ p {
   font-family: $mainfontfamily;
   font-weight: 100;
   font-size: 14px;
-  margin: 0px;
+  margin: $no-margin;
 }
 /*** header first page ***/
 .header-container {
   @include flexColumn;
   align-items: center;
   margin: $no-margin;
-  margin-left: $no-margin;
-  margin-right: $no-margin;
   .logo-element {
     position: relative;
     max-width: 197px;
@@ -76,6 +81,8 @@ p {
   width: 100%;
   background-color: #EAEAEA;
   box-shadow: 0px 3px 2px 0px lightgray inset;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .booking-button-bg {
   @include flexColumn;
@@ -89,6 +96,7 @@ p {
   display: flex;
   font-size: 16px;
   font-weight: 500;
+  font-family: $mainfontfamily;
   color: white;
   align-self: center;
   align-items: center;
@@ -153,7 +161,7 @@ p {
   justify-content: center;
   max-width: 1080px;
   width: 100%;
-  margin-right: 0px;
+  margin-right: $no-margin;
 }
 .how-to-section {
   @include flexColumn;  
@@ -223,13 +231,13 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 20px 50px 0px 20px;
+  margin: 15px 50px 15px 20px;
 }
 .card-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  line-height: 0px;
+  line-height: 20px;
 }
 .heart--container {
   display: flex;
@@ -237,6 +245,7 @@ p {
   justify-content: center;
   position: relative;
   height: 25px;
+  margin-top: 5px;
   .heart1 {
     position: absolute;
     top: 0;
@@ -279,7 +288,7 @@ p {
             display: inline;
             list-style: none;
             font-size: 16px;
-            font-family: "Roboto", sans-serif;
+            font-family: $mainfontfamily;
             color: #D6FFF5;
             text-decoration: none;
             line-height: 30px;
@@ -427,7 +436,7 @@ p {
       @include flexRowRev;
       gap: 50px;
       align-items: flex-end;
-      margin-bottom: 0px;
+      margin-bottom: $no-margin;
           li {
               display: inline;
               list-style: none;

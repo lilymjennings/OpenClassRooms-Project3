@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,18 +28,18 @@
             </svg>
             <div class="location-header-container"> 
                 <svg xmlns="http://www.w3.org/2000/svg" height="16" width="12" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path opacity="1" fill="#353535" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
-                <h3>Islington, London<h3>     
+                <h3>Islington, London</h3>     
             </div>
             <div class="booking-button-bg">
                 <h1>Book the meal you want</h1>
                 <h2>Discover our carefully selected high-end restaurants</h2>
                 <a href="#eating-places-link" style="text-decoration: none; justify-content: center; display: flex;">
-                    <button class="btn" type="button">Explore our restaurants</button> 
+                    <div class="btn">Explore our restaurants</div> 
                 </a>
             </div>
     </header>
         <article class="how-to-section">
-            <h1>How it works</h1>
+            <h6>How it works</h6>
             <div class="align-content-container">
                 <a class="filter-all" href="#">
                     <h5 class="filter-numbers">1</h5>
@@ -70,88 +71,82 @@
             </div>
         </article>
         <article class="restaurant-container">
-            <h1 id="eating-places-link">Restaurants</h1>
+            <h6 id="eating-places-link">Restaurants</h6>
             <div class="cards-section">
                 <a class="restaurant-card" href="#">
                     <img class="image-card-restaurant" src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="a main meal at kitchen west">
                     <p class="new-label-overlay">New</p>
                     <div class="restaurant-card-all">
-                        <span class="card-text">
+                        <div class="card-text">
                             <h4>Kitchen West</h4>
                             <h5>Angel</h5>
-                        </span>
+                        </div>
                         <div class="heart--container">
                             <svg class="heart1" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.7203 2.40576L12.7206 2.40551C14.7223 0.15233 17.9032 -0.169451 20.024 1.80187C22.5183 4.1243 22.6557 8.32326 20.412 10.8492L20.4119 10.8493L12.0976 20.2148C12.0975 20.2149 12.0975 20.2149 12.0975 20.2149C11.7593 20.5955 11.237 20.5955 10.8988 20.2149C10.8988 20.2149 10.8987 20.2149 10.8987 20.2148L2.58455 10.8495C0.344816 8.32357 0.482212 4.1245 2.9764 1.80201C5.09737 -0.169649 8.28247 0.152585 10.2797 2.40514L10.2802 2.40576L11.1267 3.35732L11.5003 3.77727L11.8739 3.35732L12.7203 2.40576Z" stroke="#101010"/>
-                            </svg>                                
-                            <svg class="heart2" width="23" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g id="Like">
-                                <path id="Vector" d="M19.865 1.43593C17.5103 -0.753131 14.0083 -0.359381 11.847 2.07343L11.0005 3.02499L10.154 2.07343C7.99701 -0.359381 4.49076 -0.753131 2.13607 1.43593C-0.562363 3.94843 -0.704161 8.45781 1.71068 11.1812L10.0251 20.5469C10.5622 21.1516 11.4345 21.1516 11.9716 20.5469L20.2861 11.1812C22.7052 8.45781 22.5634 3.94843 19.865 1.43593Z" fill="url(#paint0_linear_63429_507)"/>
-                                </g>
+                                <path d="M12.7206 2.40576L12.7208 2.40551C14.7226 0.15233 17.9035 -0.169451 20.0243 1.80187C22.5186 4.1243 22.656 8.32326 20.4123 10.8492L20.4122 10.8493L12.0978 20.2148C11.7596 20.5956 11.2372 20.5956 10.899 20.2148L2.5848 10.8495C0.34506 8.32357 0.482456 4.1245 2.97664 1.80201C5.09762 -0.169649 8.28271 0.152585 10.2799 2.40514L10.2805 2.40576L11.127 3.35732L11.5005 3.77727L11.8741 3.35732L12.7206 2.40576Z" stroke="#101010"/>
+                            </svg>                                                     
+                            <svg class="heart2" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.365 1.43642C18.0103 -0.752643 14.5083 -0.358893 12.347 2.07392L11.5005 3.02548L10.654 2.07392C8.49701 -0.358893 4.99076 -0.752643 2.63607 1.43642C-0.0623635 3.94892 -0.20416 8.45829 2.21068 11.1817L10.5251 20.5474C11.0622 21.152 11.9345 21.152 12.4716 20.5474L20.7861 11.1817C23.2052 8.45829 23.0634 3.94892 20.365 1.43642V1.43642Z" fill="url(#paint0_linear_422_7)"/>
                                 <defs>
-                                <linearGradient id="paint0_linear_63429_507" x1="11.0002" y1="-5.4601" x2="3.43443" y2="27.9923" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#9356DC"/>
+                                <linearGradient x1="11.5002" y1="-5.45961" x2="3.93443" y2="27.9928" gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="#9356DC"/>
                                 <stop offset="1" stop-color="#FF79DA"/>
                                 </linearGradient>
                                 </defs>
-                            </svg>                                
-                        </div>                                                                                   
+                            </svg>                                                                                       
+                        </div>                                                                                      
                     </div>
                 </a>
                 <a class="restaurant-card" href="#">
                     <img class="image-card-restaurant" src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="a main meal at kitchen west">
                     <p class="new-label-overlay">New</p>
                     <div class="restaurant-card-all">
-                        <span class="card-text">
+                        <div class="card-text">
                             <h4>Elderflower</h4>
                             <h5>Old Street</h5>
-                        </span>
+                        </div>
                         <div class="heart--container">
                             <svg class="heart1" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.7203 2.40576L12.7206 2.40551C14.7223 0.15233 17.9032 -0.169451 20.024 1.80187C22.5183 4.1243 22.6557 8.32326 20.412 10.8492L20.4119 10.8493L12.0976 20.2148C12.0975 20.2149 12.0975 20.2149 12.0975 20.2149C11.7593 20.5955 11.237 20.5955 10.8988 20.2149C10.8988 20.2149 10.8987 20.2149 10.8987 20.2148L2.58455 10.8495C0.344816 8.32357 0.482212 4.1245 2.9764 1.80201C5.09737 -0.169649 8.28247 0.152585 10.2797 2.40514L10.2802 2.40576L11.1267 3.35732L11.5003 3.77727L11.8739 3.35732L12.7203 2.40576Z" stroke="#101010"/>
-                            </svg>                                
-                            <svg class="heart2" width="23" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g id="Like">
-                                <path id="Vector" d="M19.865 1.43593C17.5103 -0.753131 14.0083 -0.359381 11.847 2.07343L11.0005 3.02499L10.154 2.07343C7.99701 -0.359381 4.49076 -0.753131 2.13607 1.43593C-0.562363 3.94843 -0.704161 8.45781 1.71068 11.1812L10.0251 20.5469C10.5622 21.1516 11.4345 21.1516 11.9716 20.5469L20.2861 11.1812C22.7052 8.45781 22.5634 3.94843 19.865 1.43593Z" fill="url(#paint0_linear_63429_507)"/>
-                                </g>
+                                <path d="M12.7206 2.40576L12.7208 2.40551C14.7226 0.15233 17.9035 -0.169451 20.0243 1.80187C22.5186 4.1243 22.656 8.32326 20.4123 10.8492L20.4122 10.8493L12.0978 20.2148C11.7596 20.5956 11.2372 20.5956 10.899 20.2148L2.5848 10.8495C0.34506 8.32357 0.482456 4.1245 2.97664 1.80201C5.09762 -0.169649 8.28271 0.152585 10.2799 2.40514L10.2805 2.40576L11.127 3.35732L11.5005 3.77727L11.8741 3.35732L12.7206 2.40576Z" stroke="#101010"/>
+                            </svg>                                                     
+                            <svg class="heart2" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.365 1.43642C18.0103 -0.752643 14.5083 -0.358893 12.347 2.07392L11.5005 3.02548L10.654 2.07392C8.49701 -0.358893 4.99076 -0.752643 2.63607 1.43642C-0.0623635 3.94892 -0.20416 8.45829 2.21068 11.1817L10.5251 20.5474C11.0622 21.152 11.9345 21.152 12.4716 20.5474L20.7861 11.1817C23.2052 8.45829 23.0634 3.94892 20.365 1.43642V1.43642Z" fill="url(#paint0_linear_422_7)"/>
                                 <defs>
-                                <linearGradient id="paint0_linear_63429_507" x1="11.0002" y1="-5.4601" x2="3.43443" y2="27.9923" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#9356DC"/>
+                                <linearGradient x1="11.5002" y1="-5.45961" x2="3.93443" y2="27.9928" gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="#9356DC"/>
                                 <stop offset="1" stop-color="#FF79DA"/>
                                 </linearGradient>
                                 </defs>
-                            </svg>                                
-                        </div>                                   
+                            </svg>                                                                                       
+                        </div>                                           
                     </div>
                 </a>
                 <a class="restaurant-card" href="#">
                     <img class="image-card-restaurant" src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="a main meal at kitchen west">
                     <div class="restaurant-card-all">
-                        <span class="card-text">
+                        <div class="card-text">
                             <h4>Shoreditch Canteen</h4>
                             <h5>Shoreditch</h5>
-                        </span>
-                        <div class="heart--container">
+                        </div>
+                           <div class="heart--container">
                             <svg class="heart1" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.7203 2.40576L12.7206 2.40551C14.7223 0.15233 17.9032 -0.169451 20.024 1.80187C22.5183 4.1243 22.6557 8.32326 20.412 10.8492L20.4119 10.8493L12.0976 20.2148C12.0975 20.2149 12.0975 20.2149 12.0975 20.2149C11.7593 20.5955 11.237 20.5955 10.8988 20.2149C10.8988 20.2149 10.8987 20.2149 10.8987 20.2148L2.58455 10.8495C0.344816 8.32357 0.482212 4.1245 2.9764 1.80201C5.09737 -0.169649 8.28247 0.152585 10.2797 2.40514L10.2802 2.40576L11.1267 3.35732L11.5003 3.77727L11.8739 3.35732L12.7203 2.40576Z" stroke="#101010"/>
-                            </svg>                                
-                            <svg class="heart2" width="23" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g id="Like">
-                                <path id="Vector" d="M19.865 1.43593C17.5103 -0.753131 14.0083 -0.359381 11.847 2.07343L11.0005 3.02499L10.154 2.07343C7.99701 -0.359381 4.49076 -0.753131 2.13607 1.43593C-0.562363 3.94843 -0.704161 8.45781 1.71068 11.1812L10.0251 20.5469C10.5622 21.1516 11.4345 21.1516 11.9716 20.5469L20.2861 11.1812C22.7052 8.45781 22.5634 3.94843 19.865 1.43593Z" fill="url(#paint0_linear_63429_507)"/>
-                                </g>
+                                <path d="M12.7206 2.40576L12.7208 2.40551C14.7226 0.15233 17.9035 -0.169451 20.0243 1.80187C22.5186 4.1243 22.656 8.32326 20.4123 10.8492L20.4122 10.8493L12.0978 20.2148C11.7596 20.5956 11.2372 20.5956 10.899 20.2148L2.5848 10.8495C0.34506 8.32357 0.482456 4.1245 2.97664 1.80201C5.09762 -0.169649 8.28271 0.152585 10.2799 2.40514L10.2805 2.40576L11.127 3.35732L11.5005 3.77727L11.8741 3.35732L12.7206 2.40576Z" stroke="#101010"/>
+                            </svg>                                                     
+                            <svg class="heart2" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.365 1.43642C18.0103 -0.752643 14.5083 -0.358893 12.347 2.07392L11.5005 3.02548L10.654 2.07392C8.49701 -0.358893 4.99076 -0.752643 2.63607 1.43642C-0.0623635 3.94892 -0.20416 8.45829 2.21068 11.1817L10.5251 20.5474C11.0622 21.152 11.9345 21.152 12.4716 20.5474L20.7861 11.1817C23.2052 8.45829 23.0634 3.94892 20.365 1.43642V1.43642Z" fill="url(#paint0_linear_422_7)"/>
                                 <defs>
-                                <linearGradient id="paint0_linear_63429_507" x1="11.0002" y1="-5.4601" x2="3.43443" y2="27.9923" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#9356DC"/>
+                                <linearGradient id="paint0_linear_422_7" x1="11.5002" y1="-5.45961" x2="3.93443" y2="27.9928" gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="#9356DC"/>
                                 <stop offset="1" stop-color="#FF79DA"/>
                                 </linearGradient>
                                 </defs>
-                            </svg>                                
-                        </div>                 
+                            </svg>                                                                                       
+                        </div>   
                     </div>
                 </a>
                 <a class="restaurant-card" href="#">
                     <img class="image-card-restaurant" src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="a main meal at kitchen west">
-                    <span class="restaurant-card-all">
+                    <div class="restaurant-card-all">
                         <div class="card-text">
                             <h4>The Bay Leaf</h4>
                             <h5>Hoxton</h5>
@@ -159,21 +154,19 @@
                         <div class="heart"></div>
                         <div class="heart--container">
                             <svg class="heart1" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.7203 2.40576L12.7206 2.40551C14.7223 0.15233 17.9032 -0.169451 20.024 1.80187C22.5183 4.1243 22.6557 8.32326 20.412 10.8492L20.4119 10.8493L12.0976 20.2148C12.0975 20.2149 12.0975 20.2149 12.0975 20.2149C11.7593 20.5955 11.237 20.5955 10.8988 20.2149C10.8988 20.2149 10.8987 20.2149 10.8987 20.2148L2.58455 10.8495C0.344816 8.32357 0.482212 4.1245 2.9764 1.80201C5.09737 -0.169649 8.28247 0.152585 10.2797 2.40514L10.2802 2.40576L11.1267 3.35732L11.5003 3.77727L11.8739 3.35732L12.7203 2.40576Z" stroke="#101010"/>
-                            </svg>                                
-                            <svg class="heart2" width="23" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g id="Like">
-                                <path id="Vector" d="M19.865 1.43593C17.5103 -0.753131 14.0083 -0.359381 11.847 2.07343L11.0005 3.02499L10.154 2.07343C7.99701 -0.359381 4.49076 -0.753131 2.13607 1.43593C-0.562363 3.94843 -0.704161 8.45781 1.71068 11.1812L10.0251 20.5469C10.5622 21.1516 11.4345 21.1516 11.9716 20.5469L20.2861 11.1812C22.7052 8.45781 22.5634 3.94843 19.865 1.43593Z" fill="url(#paint0_linear_63429_507)"/>
-                                </g>
+                                <path d="M12.7206 2.40576L12.7208 2.40551C14.7226 0.15233 17.9035 -0.169451 20.0243 1.80187C22.5186 4.1243 22.656 8.32326 20.4123 10.8492L20.4122 10.8493L12.0978 20.2148C11.7596 20.5956 11.2372 20.5956 10.899 20.2148L2.5848 10.8495C0.34506 8.32357 0.482456 4.1245 2.97664 1.80201C5.09762 -0.169649 8.28271 0.152585 10.2799 2.40514L10.2805 2.40576L11.127 3.35732L11.5005 3.77727L11.8741 3.35732L12.7206 2.40576Z" stroke="#101010"/>
+                            </svg>                                                     
+                            <svg class="heart2" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.365 1.43642C18.0103 -0.752643 14.5083 -0.358893 12.347 2.07392L11.5005 3.02548L10.654 2.07392C8.49701 -0.358893 4.99076 -0.752643 2.63607 1.43642C-0.0623635 3.94892 -0.20416 8.45829 2.21068 11.1817L10.5251 20.5474C11.0622 21.152 11.9345 21.152 12.4716 20.5474L20.7861 11.1817C23.2052 8.45829 23.0634 3.94892 20.365 1.43642V1.43642Z" fill="url(#paint0_linear_422_7)"/>
                                 <defs>
-                                <linearGradient id="paint0_linear_63429_507" x1="11.0002" y1="-5.4601" x2="3.43443" y2="27.9923" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#9356DC"/>
+                                <linearGradient x1="11.5002" y1="-5.45961" x2="3.93443" y2="27.9928" gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="#9356DC"/>
                                 <stop offset="1" stop-color="#FF79DA"/>
                                 </linearGradient>
                                 </defs>
-                            </svg>                                
-                        </div>                                   
-                    </span>
+                            </svg>                                                                                       
+                        </div>                                      
+                    </div>
                 </a>
                 
             </div>
@@ -195,7 +188,7 @@
                     <a class="footer-link" href="#">Suggest a restaurant</a>
                 </li>
                 <li>
-                    <i class="fas fa-hands-helping" style="color: #ffffff; width: 13; margin-right: 5px"></i>                      
+                    <i class="fas fa-hands-helping" style="color: #ffffff; width: 13px; margin-right: 5px"></i>                      
                     <a class="footer-link" href="#">Become a partner</a>
                 </li>
                 <li><a href="#">Legal notice</a></li>
