@@ -1,5 +1,8 @@
 $mainlineargradient: linear-gradient(#ff79da, #9356DC 100%);
 $hoverlineargradient: linear-gradient(#FF8DE0 -5.2%, #A36FE1 110.74%);
+$primarycolor: #9356DC;
+$secondarycolor: #FF79DA;
+$tertiary: #99E2D0;
 $mainfontfamily: "Roboto", sans-serif;
 $secondaryfont: Shrikhand;
 $no-margin: 0px;
@@ -56,6 +59,7 @@ h6 {
   font-family: $secondaryfont;
   font-size: 28px;
   font-weight: 400;
+  $no-margin: 0px;
 }
 p {
   font-family: $mainfontfamily;
@@ -92,7 +96,7 @@ p {
   @include flexColumn;
   text-align: center;
   justify-content: center;
-  background-color: #F6F6F6;
+  background-color: white;
   width: 100%;
   height: 280px;
 }
@@ -366,6 +370,7 @@ p {
   height: 265px;
   margin-bottom: -10px;
 }
+
 .todays-menu {
   display: flex;
   justify-content: center;  
@@ -373,8 +378,9 @@ p {
   max-width: 1055px;
   min-width: 375px;
   height: 70px;
-  gap: 50px;
   padding-top: 20px;
+  gap: 25px;
+  margin-left: -15px;
 }
 
 .restaurant-container-for-menus {
