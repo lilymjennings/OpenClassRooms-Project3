@@ -2,6 +2,7 @@ $mainlineargradient: linear-gradient(#ff79da, #9356DC 100%);
 $hoverlineargradient: linear-gradient(#FF8DE0 -5.2%, #A36FE1 110.74%);
 $primarycolor: #9356DC;
 $secondarycolor: #FF79DA;
+$LightGrayBG: #F6F6F6;
 $tertiary: #99E2D0;
 $mainfontfamily: "Roboto", sans-serif;
 $secondaryfont: Shrikhand;
@@ -40,10 +41,11 @@ h2{
 h4 {
   font-family: $mainfontfamily;
   margin: 0px;
+  font-size: 18px;
 }
 h5 {
   font-family: $mainfontfamily;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 100;
   margin: $no-margin;
 }
@@ -56,18 +58,26 @@ h6 {
   margin-bottom: 20px;
 }
 .b {
+  display: flex;
+  position: relative;
+  justify-items: start;
   font-family: $secondaryfont;
   font-size: 28px;
   font-weight: 400;
   $no-margin: 0px;
 }
+.c {
+  font-family: $mainfontfamily;
+  font-size: 14px;
+  font-weight: 100;
+  margin: $no-margin;
+}
 p {
   font-family: $mainfontfamily;
   font-weight: 100;
-  font-size: 14px;
+  font-size: 15.04px;
   margin: $no-margin;
 }
-
 
 /*** header first page ***/
 .header-container {
@@ -96,7 +106,7 @@ p {
   @include flexColumn;
   text-align: center;
   justify-content: center;
-  background-color: white;
+  background-color: $LightGrayBG;
   width: 100%;
   height: 280px;
 }
@@ -129,16 +139,15 @@ p {
 /*****HOW IT WORKS******/
 .homepage-filters {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   width: 100%;
   max-width: 1100px;
   min-width: 300px;
-  gap: 15px;
+  gap: 20px;
   height: 70px;
-  border-radius: 20px;
-  padding-left: 20px;
-  background: var(--Background, #F6F6F6);
+  border-radius: 30px;
+  padding-left: 30px;
+  background: var(--Background, $LightGrayBG);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 .filter-all {
@@ -146,6 +155,7 @@ p {
   align-items: center;
   color: black;
   text-decoration: none;
+  width: 335px;
 }
 .filter-numbers{  
   display: flex;
@@ -154,7 +164,7 @@ p {
   font-weight: 500;
   color: white;
   align-items: center;
-  background-color: #9356DC;
+  background-color: $primarycolor;
   padding: 6px;
   width: 10px;
   height: 10px;
@@ -163,8 +173,9 @@ p {
 }
 .align-content-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-content: center;
+  align-items: center;
   gap: 30px;
   justify-content: center;
   max-width: 1080px;
@@ -204,7 +215,7 @@ p {
   justify-content: center;
   align-items: center;
   position: relative;
-  border: 7px solid #F6F6F6;
+  border: 7px solid $LightGrayBG;
   border-top: 7px solid #9356DC;
   border-radius: 50%;
   width: 80px;
@@ -229,7 +240,7 @@ p {
   padding: 10px;
   margin: 20px;
   width: 80px;
-  background-color:#99E2D0;
+  background-color: $tertiary;
   color: #008766;
   font-weight: 500;
   font-size: 14px;
@@ -244,7 +255,7 @@ p {
   align-content: center;
   justify-content: center;
   padding: 20px;
-  background-color: #F6F6F6;
+  background-color: $LightGrayBG;
 }
 .cards-section {
   display: flex;
@@ -280,12 +291,13 @@ p {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 15px 50px 15px 20px;
+  align-items: center;
 }
 .card-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  line-height: 20px;
+  line-height: 25px;
 }
 .heart--container {
   display: flex;
@@ -357,9 +369,16 @@ p {
   padding: 0 20px 0 20px;
   .arrow {
     position: absolute;
+    display: flex;
+    align-self: center;
+    justify-self: center;
     left: 0%;
     margin-left: 20px;
   }
+}
+
+.arrow-container {
+  display: flex;
 }
 
 .full-width-header {
@@ -373,25 +392,27 @@ p {
 
 .todays-menu {
   display: flex;
-  justify-content: center;  
+  justify-content: space-between;  
   align-items: center;
-  max-width: 1055px;
-  min-width: 375px;
+  max-width: 675px;
+  min-width: 300px;
   height: 70px;
   padding-top: 20px;
+  padding-right: 35px;
+  padding-left: 20px;
   gap: 25px;
-  margin-left: -15px;
 }
 
 .restaurant-container-for-menus {
   @include flexColumn;  
   justify-content: center;  
+  align-items: center;
   align-self: center;
   max-width: 1055px;
   min-width: 375px;
   border-top-right-radius: 50px;
   border-top-left-radius: 50px;
-  background-color: #F6F6F6;
+  background-color: $LightGrayBG;
   width: 100%;
   margin-top: -40px;
 }
@@ -456,14 +477,15 @@ p {
   justify-content: center;
   padding: 0px 0px 0px 12px;
 }
-.meal-part2 {
+
+.price {
   display: flex;
-  align-self: flex-start;
   align-self: end;
-  white-space: none;
+  padding-right: 12px;
   margin-bottom: 14px;
-  padding-right: 10px;
+  position: relative;
 }
+
 /***** Media Querys *******/
 @media screen and (max-width: 375px) {
   ul {
@@ -473,33 +495,79 @@ p {
 }
 
 @media screen and (min-width: 1440px) {
-.meals {
-  display: flex;  
-  align-items: center;
-  line-height: 1.5;
-  height: 75px;
-  border-radius: 20px;
-  background-color: white;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);  
-  &:hover{
-    .check-container {
+  .meals {
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
+    height: 75px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    overflow:hidden
+  }
+
+   .check-container {
       display: flex;
       justify-content: center;
-      background-color: #99E2D0;
+      background-color: $tertiary;
       border-bottom-right-radius: 20px;
       border-top-right-radius: 20px;
       height: 75px;
-      width: 70px; 
-      .check {
-        display: flex;
-        align-self: center;
-        justify-self: end;
-        width: 17px;
-        height: 17px;
-        }
+      width: 70px;
+      position: relative;
+      left: 60px;
+  }
+
+  .check-container .check {
+    display: flex;
+    align-self: center;
+    justify-self: end;
+    width: 17px;
+    height: 17px;
+  }
+
+   .meals:hover .check-container {
+      animation: move 1.2s ease forwards;
+
     }
+    .price {
+      display: flex;
+      align-self: end;
+      padding-right: 12px;
+      margin-bottom: 14px;
+      left: 60px;
+      position: relative;
+    }
+    .meals:hover {
+      .price {
+        display: flex;
+        align-self: end;
+        padding-right: 12px;
+        margin-bottom: 14px;
+        animation: move 1.2s ease forwards;
+      }
+    }
+    @keyframes move {
+      0% {left: 60px;}
+      60% {left: 0px;}
+      100% {left: 60px;}
+    }
+}
+
+@media screen and (min-width: 1440px) {
+  .align-content-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+    max-width: 1080px;
+    width: 100%;
+    margin-right: $no-margin;
   }
 }
+@media screen and (min-width: 1440px) {
   .footer-background {
     @include flexRowRev;  
     background-color: #353535;
@@ -522,7 +590,7 @@ p {
               list-style: none;
               font-size: 16px;
               font-family: "Roboto", sans-serif;
-              color: #D6FFF5;
+              color: white;
               text-decoration: none;
               line-height: 30px;
               :any-link {

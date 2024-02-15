@@ -25,11 +25,12 @@ h2 {
 h4 {
   font-family: "Roboto", sans-serif;
   margin: 0px;
+  font-size: 18px;
 }
 
 h5 {
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 100;
   margin: 0px;
 }
@@ -44,15 +45,25 @@ h6 {
 }
 
 .b {
+  display: flex;
+  position: relative;
+  justify-items: start;
   font-family: Shrikhand;
   font-size: 28px;
   font-weight: 400;
 }
 
+.c {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  margin: 0px;
+}
+
 p {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
-  font-size: 14px;
+  font-size: 15.04px;
   margin: 0px;
 }
 
@@ -86,7 +97,7 @@ p {
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  background-color: white;
+  background-color: #F6F6F6;
   width: 100%;
   height: 280px;
 }
@@ -120,15 +131,14 @@ p {
 /*****HOW IT WORKS******/
 .homepage-filters {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   width: 100%;
   max-width: 1100px;
   min-width: 300px;
-  gap: 15px;
+  gap: 20px;
   height: 70px;
-  border-radius: 20px;
-  padding-left: 20px;
+  border-radius: 30px;
+  padding-left: 30px;
   background: var(--Background, #F6F6F6);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
@@ -138,6 +148,7 @@ p {
   align-items: center;
   color: black;
   text-decoration: none;
+  width: 335px;
 }
 
 .filter-numbers {
@@ -157,8 +168,9 @@ p {
 
 .align-content-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-content: center;
+  align-items: center;
   gap: 30px;
   justify-content: center;
   max-width: 1080px;
@@ -280,13 +292,14 @@ p {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 15px 50px 15px 20px;
+  align-items: center;
 }
 
 .card-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  line-height: 20px;
+  line-height: 25px;
 }
 
 .heart--container {
@@ -367,8 +380,15 @@ p {
 }
 .header-restaurants .arrow {
   position: absolute;
+  display: flex;
+  align-self: center;
+  justify-self: center;
   left: 0%;
   margin-left: 20px;
+}
+
+.arrow-container {
+  display: flex;
 }
 
 .full-width-header {
@@ -383,20 +403,22 @@ p {
 
 .todays-menu {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  max-width: 1055px;
-  min-width: 375px;
+  max-width: 675px;
+  min-width: 300px;
   height: 70px;
   padding-top: 20px;
+  padding-right: 35px;
+  padding-left: 20px;
   gap: 25px;
-  margin-left: -15px;
 }
 
 .restaurant-container-for-menus {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   align-self: center;
   max-width: 1055px;
   min-width: 375px;
@@ -475,13 +497,12 @@ p {
   padding: 0px 0px 0px 12px;
 }
 
-.meal-part2 {
+.price {
   display: flex;
-  align-self: flex-start;
   align-self: end;
-  white-space: none;
+  padding-right: 12px;
   margin-bottom: 14px;
-  padding-right: 10px;
+  position: relative;
 }
 
 /***** Media Querys *******/
@@ -501,8 +522,9 @@ p {
     border-radius: 20px;
     background-color: white;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
   }
-  .meals:hover .check-container {
+  .check-container {
     display: flex;
     justify-content: center;
     background-color: #99E2D0;
@@ -510,14 +532,60 @@ p {
     border-top-right-radius: 20px;
     height: 75px;
     width: 70px;
+    position: relative;
+    left: 60px;
   }
-  .meals:hover .check-container .check {
+  .check-container .check {
     display: flex;
     align-self: center;
     justify-self: end;
     width: 17px;
     height: 17px;
   }
+  .meals:hover .check-container {
+    animation: move 1.2s ease forwards;
+  }
+  .price {
+    display: flex;
+    align-self: end;
+    padding-right: 12px;
+    margin-bottom: 14px;
+    left: 60px;
+    position: relative;
+  }
+  .meals:hover .price {
+    display: flex;
+    align-self: end;
+    padding-right: 12px;
+    margin-bottom: 14px;
+    animation: move 1.2s ease forwards;
+  }
+  @keyframes move {
+    0% {
+      left: 60px;
+    }
+    60% {
+      left: 0px;
+    }
+    100% {
+      left: 60px;
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  .align-content-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+    max-width: 1080px;
+    width: 100%;
+    margin-right: 0px;
+  }
+}
+@media screen and (min-width: 1440px) {
   .footer-background {
     display: flex;
     flex-direction: row-reverse;
@@ -545,7 +613,7 @@ p {
     list-style: none;
     font-size: 16px;
     font-family: "Roboto", sans-serif;
-    color: #D6FFF5;
+    color: white;
     text-decoration: none;
     line-height: 30px;
   }
