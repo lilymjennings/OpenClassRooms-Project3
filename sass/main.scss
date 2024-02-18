@@ -136,6 +136,12 @@ p {
   scroll-behavior: smooth;
 }
 
+.homepage-icons {
+  fill: #353535;
+  :hover {
+    fill: $primarycolor;
+  }
+}
 /*****HOW IT WORKS******/
 .homepage-filters {
   display: flex;
@@ -160,7 +166,7 @@ p {
 .filter-numbers{  
   display: flex;
   position: relative;
-  font-size: 14x;
+  font-size: 14px;
   font-weight: 500;
   color: white;
   align-items: center;
@@ -236,7 +242,7 @@ p {
   position: absolute;
   display: flex;
   justify-content: center;
-  align-self: flex-end;
+  align-items: flex-end;
   padding: 10px;
   margin: 20px;
   width: 80px;
@@ -246,6 +252,12 @@ p {
   font-size: 14px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   border-radius: 2px;
+}
+.cards-link {
+  display: flex;
+  text-decoration: none;
+  position: relative;
+  justify-content: flex-end;
 }
 .restaurant-container {
   display: flex;
@@ -276,6 +288,7 @@ p {
   background-color: white;
   color: black;
   text-decoration: none;
+
   .image-card-restaurant {
     display: block;
     object-fit: cover;
@@ -286,19 +299,6 @@ p {
   }
 }
 
-.restaurant-card-all {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 15px 50px 15px 20px;
-  align-items: center;
-}
-.card-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 25px;
-}
 .heart--container {
   display: flex;
   align-content: center;
@@ -328,6 +328,21 @@ p {
       opacity:100%;
     }
   }
+}
+.restaurant-card-all {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 15px 50px 15px 20px;
+  align-items: center;
+}
+.card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 25px;
+  text-decoration: none;
+  color: black;
 }
 /*****footer********/
 .footer-background {
@@ -398,9 +413,9 @@ p {
   min-width: 300px;
   height: 70px;
   padding-top: 20px;
-  padding-right: 35px;
+  padding-right: 40px;
   padding-left: 20px;
-  gap: 25px;
+  gap: 20px;
 }
 
 .restaurant-container-for-menus {
@@ -478,13 +493,66 @@ p {
   padding: 0px 0px 0px 12px;
 }
 
-.price {
+.meals {
   display: flex;
-  align-self: end;
-  padding-right: 12px;
-  margin-bottom: 14px;
-  position: relative;
+  align-items: center;
+  line-height: 1.5;
+  height: 75px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }
+
+ .check-container {
+    display: flex;
+    justify-content: center;
+    background-color: $tertiary;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 75px;
+    width: 59px;
+    position: relative;
+    left: 60px;
+}
+
+.check-container .check {
+  display: flex;
+  align-self: center;
+  justify-self: end;
+  width: 59px;
+}
+.check {
+  width: 17px;
+  height: 17px;
+} 
+
+ .meals:hover .check-container {
+    animation: move 1.2s ease forwards;
+
+  }
+  .price {
+    display: flex;
+    align-self: end;
+    padding-right: 12px;
+    margin-bottom: 14px;
+    left: 60px;
+    position: relative;
+  }
+  .meals:hover {
+    .price {
+      display: flex;
+      align-self: end;
+      padding-right: 12px;
+      margin-bottom: 14px;
+      animation: move 1.2s ease forwards;
+    }
+  }
+  @keyframes move {
+    0% {left: 60px;}
+    60% {left: 0px;}
+    100% {left: 60px;}
+  }
 
 /***** Media Querys *******/
 @media screen and (max-width: 375px) {
@@ -492,66 +560,12 @@ p {
     @include flexColumn;
     align-self: flex-start;
   }
-}
-
-@media screen and (min-width: 1440px) {
-  .meals {
-    display: flex;
-    align-items: center;
-    line-height: 1.5;
-    height: 75px;
-    border-radius: 20px;
-    background-color: white;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-    overflow:hidden
+  .menu-text {
+    white-space: nowrap; 
+    width: 190px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
   }
-
-   .check-container {
-      display: flex;
-      justify-content: center;
-      background-color: $tertiary;
-      border-bottom-right-radius: 20px;
-      border-top-right-radius: 20px;
-      height: 75px;
-      width: 70px;
-      position: relative;
-      left: 60px;
-  }
-
-  .check-container .check {
-    display: flex;
-    align-self: center;
-    justify-self: end;
-    width: 17px;
-    height: 17px;
-  }
-
-   .meals:hover .check-container {
-      animation: move 1.2s ease forwards;
-
-    }
-    .price {
-      display: flex;
-      align-self: end;
-      padding-right: 12px;
-      margin-bottom: 14px;
-      left: 60px;
-      position: relative;
-    }
-    .meals:hover {
-      .price {
-        display: flex;
-        align-self: end;
-        padding-right: 12px;
-        margin-bottom: 14px;
-        animation: move 1.2s ease forwards;
-      }
-    }
-    @keyframes move {
-      0% {left: 60px;}
-      60% {left: 0px;}
-      100% {left: 60px;}
-    }
 }
 
 @media screen and (min-width: 1440px) {
